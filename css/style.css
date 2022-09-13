@@ -1,0 +1,391 @@
+@font-face {
+	font-family: 'Open Sans', sans-serif;
+src: url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
+font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Open Sans', sans-serif;
+src: url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap);
+font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Open Sans', sans-serif;
+src: url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap);
+font-weight: 600;
+}
+
+body{
+  font-family: 'Open Sans';
+}
+
+h1,h2 {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.conteiner{
+  background: #E5E5E5;
+  padding: 50px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.btm-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+/* checkbox */
+
+.checkbox {
+  width: 117px;
+  background-color: #ffffff;
+  border-radius: 10px;;
+  padding: 21px 29px 29px 30px;
+  flex-direction: column;
+  margin-right: 28px;
+}
+
+.checkbox_form {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 24px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  width: 176px;
+}
+
+.checkbox_zag {
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 25px;
+}
+
+.checkbox_form__item {
+padding-left: 30px;
+margin-top: 20px;
+display: none;
+}
+
+.checkbox_form__item + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+}
+
+.checkbox_form__item + span:before {
+  content: url(../img/check.svg);
+  position: absolute;
+  top: -3px;
+  left: 3px;
+  opacity: 0;
+  transition: opacity .3 ease-in-out;
+}
+
+.checkbox_form__item:checked + span:before {
+  opacity: 1;
+}
+
+.checkbox_form__item:checked  + span {
+  border: 1px solid #CCB26E;
+}
+
+
+/* Селектор */
+
+.select {
+  width: 179px;
+  margin-right: 66px;
+}
+
+.select_option {
+  padding: 9px 15px;
+}
+
+.choices {
+  border-radius: 10px;
+  font-size: 14px;
+  z-index: 20;
+}
+
+.choices__input .choices[data-type*=select-one] .choices__inner
+
+.is-open {
+  background-image: url(../img/up.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.choices__inner {
+  width: 146px;
+  padding: 9px 15px 11px 15px;
+  min-height: 21px;
+  border-radius: 10px;
+  z-index: 20;
+  background-color: #ffffff;
+}
+
+.is-open .choices__inner {
+  border-radius: 10px;
+}
+
+.choices__list {
+  z-index: 10;
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+
+.choices__inner .choices__list--single {
+  background-image: url(../img/down.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+
+
+.choices__input .choices__input--cloned {
+  width: 146px;
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.choices[data-type*=select-one]::after {
+  border: none;
+}
+
+
+.choices__list--dropdown, .choices__list[aria-expanded] {
+  border: 1px solid #CCB26E;
+  border-radius: 10px;
+  top: 30px;
+  border-color: #CCB26E;
+  padding-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width: 176px;
+  z-index: 10;
+}
+
+
+.is-open .choices__inner .choices__list--single {
+  background-image: url(../img/up.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+padding-top: 10px;
+}
+
+.is-focused .choices__inner, .is-open .choices__inner {
+  border-color: #CCB26E;
+  z-index: 10;
+}
+
+.is-open .choices__list--dropdown, .is-open .choices__list[aria-expanded] {
+  border-color: #CCB26E;
+  z-index: -1;
+  padding-top: 25px;
+}
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+  padding: 10px 0 10px 15px;
+}
+
+
+/* Карта */
+
+[class*='ground-pane'] {
+  filter: grayscale(1);
+}
+
+.map {
+  margin-right: 58px;
+}
+
+
+/* Скрол */
+
+.simplebar-content-wrapper {
+  overflow: auto;
+}
+
+.scroll {
+  margin-right: 58px;
+}
+
+.scroll__width {
+  width: 399px;
+  height: 310px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+}
+
+.simplebar-content-wrapper {
+  padding: 20px 30px 5px 30px;
+  background-color: #ffffff;
+}
+
+.simplebar-scrollbar:before {
+  height: 70px;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  background-color: #CCB26E;
+}
+
+
+
+/* Форма отправки */
+
+.validator {
+  flex-direction: column;
+  margin-right: 58px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.validator_revers {
+  flex-direction: column-reverse;
+}
+
+.validator__form {
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px 30px;
+  width: 440px;
+  z-index: 1;
+
+}
+
+.validor_form__input {
+  position: relative;
+  padding: 24px 20px;
+  border: 1px solid #FF5C00;
+  border-radius: 10px;
+}
+
+.validator__top {
+  padding-top: 26px;
+  flex-direction: column-reverse;
+}
+
+.validator__btm {
+  background-color: #FF5C00;
+  border-radius: 10px;
+  padding: 18.5px 53px;
+  margin-top: 45.5px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+.js-validate-error-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FF5C00 !important;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+
+
+
+/* Тултип */
+
+.tultip {
+  padding: 20px 78px 20px 29px;
+  background-color: #ffffff;
+  width: 278px;
+  min-height: 120px;
+}
+
+.tultip_text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.tultip_hover {
+
+  cursor: pointer;
+}
+
+.tultip_icon__svg {
+  top: -21px;
+  left: 193px;
+}
+
+.tultip__hover {
+  position: relative;
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+
+.tultip_info {
+  position: absolute;
+  top: -38px;
+  right: -73px;
+  padding: 7px 15px;
+  background-color: #666666;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  width: max-content;
+  z-index: 1;
+  opacity: 0;
+  transition: opasity 0.3 ease-in-out;
+}
+
+.tultip_info::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #666666;
+  background-color: #666666;
+  transform: rotate(135deg);
+  top: 16px;
+  left: 45%;
+  z-index: -1;
+}
+
+.tultip__hover:hover .tultip_info {
+  opacity: 1;
+}
+
+.tultip__hover:hover .tultip_ico path {
+  fill: #CCB26E;
+}
+
+
